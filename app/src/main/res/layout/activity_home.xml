@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="verkstad.org.in.valentineapp.Home"
+    android:id="@+id/relative">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="0dp"
+        android:hint="Username" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/button3"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
+        android:onClick="login" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="red"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="yellow"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp"
+        android:visibility="visible"
+        android:id="@+id/linear">
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoCompleteTextView"
+            android:layout_gravity="center_horizontal"
+            android:hint="Search Your Crush "
+
+            />
+
+        <RadioGroup
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio"
+            android:weightSum="1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="red"
+                android:id="@+id/radioButton"
+                android:onClick="select_rose" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="132dp"
+                android:text="yellow"
+                android:id="@+id/radioButton2"
+                android:onClick="select_rose"
+                android:layout_weight="0.52" />
+
+
+        </RadioGroup>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send As Anonymous"
+            android:id="@+id/checkBox"
+            android:onClick="anonymous"
+            android:checked="false" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/button"
+            android:onClick="send_rose"
+           />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send flowers"
+        android:id="@+id/button2"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:onClick="send_flowers" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="received flowers"
+        android:id="@+id/button4"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
+        android:onClick="received_flowers" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:id="@+id/linear2">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView" />
+    </LinearLayout>
+
+
+</RelativeLayout>

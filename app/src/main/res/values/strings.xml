@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ValentineApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_login">Login</string>
+    <string name="search">Search Your Crush</string>
+</resources>
